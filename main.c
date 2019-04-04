@@ -11,7 +11,7 @@ int main ()
   void *handle;
   char *error;
 
-  handle = dlopen ("/tmp/tmp.PcsjwwYX3D/cmake-build-debug/libplugin_implementation.so", RTLD_LAZY);
+  handle = dlopen ("./libplugin_implementation.so", RTLD_LAZY);
   if (!handle)
     {
       fprintf (stderr, "%s\n", dlerror ());
@@ -29,7 +29,7 @@ int main ()
   assert(getOneFromPluginFunction () == 1);
   dlclose (handle);
 
-  handle = dlopen ("/tmp/tmp.PcsjwwYX3D/cmake-build-debug/libplugin_implementation.so", RTLD_LAZY);
+  handle = dlopen ("./libplugin_implementation.so", RTLD_LAZY);
   if (!handle)
     {
       fprintf (stderr, "%s\n", dlerror ());
@@ -50,7 +50,7 @@ int main ()
 
   dlclose (handle);
 
-  handle = dlopen ("/tmp/tmp.PcsjwwYX3D/cmake-build-debug/libplugin_implementation.so", RTLD_LAZY);
+  handle = dlopen ("./libplugin_implementation.so", RTLD_LAZY);
   if (!handle)
     {
       fprintf (stderr, "%s\n", dlerror ());
